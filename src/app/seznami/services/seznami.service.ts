@@ -12,6 +12,7 @@ export class SeznamiService {
 
     private headers = new HttpHeaders({'Content-Type': 'application/json'});
     private url = 'http://localhost:8080/v1/nakupovalniseznami';
+    private productsUrl = 'http://localhost:8080/v1/artikli/';
 
     constructor(private http: HttpClient) {
     }
@@ -33,12 +34,14 @@ export class SeznamiService {
                         .pipe(catchError(this.handleError));
     }
 
-    /* TO DO
     create(seznamId: number, artikel: Artikel): Observable<Artikel> {
-        return this.http.post<Ar>(this.url, JSON.stringify(uporabnik), {headers: this.headers})
+        var artikelDto = { 
+            seznamId : seznamId,
+            imeArtikla : artikel.imeArtikla
+          };
+        return this.http.post<Artikel>(this.productsUrl, JSON.stringify(artikelDto), {headers: this.headers})
                         .pipe(catchError(this.handleError));
     }
-    */
 
     private handleError(error: any): Promise<any> {
         console.error('Prišlo je do napake', error);

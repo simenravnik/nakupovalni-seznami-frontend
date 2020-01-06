@@ -28,7 +28,7 @@ export class SeznamPodrobnostiComponent implements OnInit {
     }
 
     dodajArtikel(): void {
-        this.router.navigate(['seznam/' + this.seznam.id + '/dodaj']);
+        this.router.navigate(['seznami/' + this.seznam.id + '/dodaj']);
     }
 
     nazaj(): void {

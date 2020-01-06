@@ -1,0 +1,15 @@
+<h2>Dodaj artikel</h2>
+<div *ngIf="artikel">
+    <form (ngSubmit)="submitForm()" ngNativeValidate>
+        <table>
+            <tr>
+                <td><label for="imeArtikla">Naziv</label></td>
+                <td><input [(ngModel)]="artikel.imeArtikla" id="imeArtikla" name="imeArtikla" required/></td>
+            </tr>
+        </table>
+
+
+        <button type="button" (click)="nazaj()">Nazaj</button>
+        <button type="submit">Dodaj</button>
+    </form>
+</div>

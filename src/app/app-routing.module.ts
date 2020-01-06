@@ -7,6 +7,7 @@ import {UporabnikiDodajComponent} from './uporabnik/uporabniki-dodaj.component';
 
 import {SeznamiComponent} from './seznami/seznami.component';
 import {SeznamPodrobnostiComponent} from './seznami/seznam-podrobnosti.component';
+import {ArtikelDodajComponent} from './seznami/artikel-dodaj.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/uporabniki', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
     {path: 'uporabniki/:id', component: UporabnikPodrobnostiComponent},
     {path: 'dodajuporabnika', component: UporabnikiDodajComponent},
     {path: 'seznami', component: SeznamiComponent},
-    {path: 'seznami/:id', component: SeznamPodrobnostiComponent}
+    {path: 'seznami/:id', component: SeznamPodrobnostiComponent},
+    {path: 'seznami/:id/dodaj', component: ArtikelDodajComponent}
 ];
 
 @NgModule({

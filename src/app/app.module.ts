@@ -13,6 +13,7 @@ import {UporabnikService} from './uporabnik/services/uporabnik.service';
 
 import {SeznamiComponent} from './seznami/seznami.component';
 import {SeznamPodrobnostiComponent} from './seznami/seznam-podrobnosti.component';
+import {ArtikelDodajComponent} from './seznami/artikel-dodaj.component';
 import {SeznamiService} from './seznami/services/seznami.service';
 
 
@@ -29,7 +30,8 @@ import {SeznamiService} from './seznami/services/seznami.service';
         UporabnikPodrobnostiComponent,
         UporabnikiDodajComponent,
         SeznamiComponent,
-        SeznamPodrobnostiComponent
+        SeznamPodrobnostiComponent,
+        ArtikelDodajComponent
     ],
     providers: [UporabnikService, SeznamiService],
     bootstrap: [AppComponent]
