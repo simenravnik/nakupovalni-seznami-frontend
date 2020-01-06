@@ -36,6 +36,11 @@ export class SeznamiComponent implements OnInit {
         this.seznamiService
             .delete(seznam.id)
             .subscribe(seznamId => this.seznami = this.seznami.filter(s => s.id !== seznamId));
+        this.refresh();
+    }
+
+    refresh(): void {
+        window.location.reload();
     }
 
 }

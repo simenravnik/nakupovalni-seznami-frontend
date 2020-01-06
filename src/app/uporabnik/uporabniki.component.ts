@@ -36,10 +36,15 @@ export class UporabnikiComponent implements OnInit {
         this.uporabnikService
             .delete(uporabnik.id)
             .subscribe(uporabnikId => this.uporabniki = this.uporabniki.filter(u => u.id !== uporabnikId));
+        this.refresh();
     }
 
     dodajUporabnika(): void {
         this.router.navigate(['/dodajuporabnika']);
+    }
+
+    refresh(): void {
+        window.location.reload();
     }
 
 }
