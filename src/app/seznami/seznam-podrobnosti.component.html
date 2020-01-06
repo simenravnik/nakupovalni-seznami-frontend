@@ -1,0 +1,28 @@
+<div *ngIf="seznam">
+
+    <h3>Podrobnosti seznama {{seznam.naziv}}</h3>
+
+    <table>
+        <tr>
+            <td>Naziv:</td>
+            <td>{{seznam.naziv}}</td>
+        </tr>
+        <tr>
+            <td>Opis:</td>
+            <td>{{seznam.opis}}</td>
+        </tr>
+        <tr>
+            <td>Ustvarjen:</td>
+            <td>{{seznam.ustvarjen}}</td>
+        </tr>
+    </table>
+
+    <ul *ngFor="let artikel of seznam.artikli">
+        <li>
+            <b>{{artikel.imeArtikla}}</b>
+        </li>
+    </ul>
+
+    <button (click)="dodajArtikel()">Dodaj artikel</button>
+    <button (click)="nazaj()">Nazaj</button>
+</div>
