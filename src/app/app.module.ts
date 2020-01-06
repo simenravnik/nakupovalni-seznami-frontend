@@ -11,6 +11,9 @@ import {UporabnikiDodajComponent} from './uporabnik/uporabniki-dodaj.component';
 import {UporabnikPodrobnostiComponent} from './uporabnik/uporabnik-podrobnosti.component';
 import {UporabnikService} from './uporabnik/services/uporabnik.service';
 
+import {SeznamiService} from './seznami/services/seznami.service';
+import {SeznamiComponent} from './seznami/seznami.component';
+
 
 @NgModule({
     imports: [
@@ -23,9 +26,10 @@ import {UporabnikService} from './uporabnik/services/uporabnik.service';
         AppComponent,
         UporabnikiComponent,
         UporabnikPodrobnostiComponent,
-        UporabnikiDodajComponent
+        UporabnikiDodajComponent,
+        SeznamiComponent
     ],
-    providers: [UporabnikService],
+    providers: [UporabnikService, SeznamiService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
