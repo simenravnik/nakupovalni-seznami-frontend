@@ -10,14 +10,14 @@ import {SeznamiService} from './services/seznami.service';
     templateUrl: 'artikel-dodaj.component.html'
 })
 export class ArtikelDodajComponent {
-    
+
     artikel: Artikel = new Artikel;
-    seznamId : number;
-    private sub : any;
+    seznamId: number;
+    private sub: any;
 
     constructor(private seznamiService: SeznamiService,
                 private router: Router,
-                private route : ActivatedRoute) {
+                private route: ActivatedRoute) {
     }
 
     ngOnInit() {
@@ -33,7 +33,7 @@ export class ArtikelDodajComponent {
     submitForm(): void {
         this.seznamiService.create(this.seznamId, this.artikel)
         .subscribe(() => this.router.navigate(['/seznami/' + this.seznamId]));
-        
+
         this.router.navigate(['/seznami/' + this.seznamId]);
     }
 

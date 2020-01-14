@@ -47,4 +47,7 @@ export class UporabnikiComponent implements OnInit {
         window.location.reload();
     }
 
+    seznami() {
+        this.router.navigate(['/seznami']);
+    }
 }

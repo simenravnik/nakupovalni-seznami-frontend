@@ -35,7 +35,7 @@ export class SeznamiService {
     }
 
     create(seznamId: number, artikel: Artikel): Observable<Artikel> {
-        var artikelDto = { 
+        var artikelDto = {
             seznamId : seznamId,
             imeArtikla : artikel.imeArtikla
           };
