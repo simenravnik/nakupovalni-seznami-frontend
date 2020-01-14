@@ -31,7 +31,7 @@ export class ArtikelDodajComponent {
     }
 
     submitForm(): void {
-        this.seznamiService.create(this.seznamId, this.artikel)
+        this.seznamiService.createArtikel(this.seznamId, this.artikel)
         .subscribe(() => this.router.navigate(['/seznami/' + this.seznamId]));
 
         this.router.navigate(['/seznami/' + this.seznamId]);

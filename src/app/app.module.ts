@@ -16,6 +16,7 @@ import {SeznamPodrobnostiComponent} from './seznami/seznam-podrobnosti.component
 import {ArtikelDodajComponent} from './seznami/artikel-dodaj.component';
 import {SeznamiService} from './seznami/services/seznami.service';
 import {UporabnikUrediComponent} from './uporabnik/uporabnik-uredi.component';
+import {SeznamUrediComponent} from './seznami/seznam-uredi.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {UporabnikUrediComponent} from './uporabnik/uporabnik-uredi.component';
         UporabnikUrediComponent,
         SeznamiComponent,
         SeznamPodrobnostiComponent,
-        ArtikelDodajComponent
+        ArtikelDodajComponent,
+        SeznamUrediComponent
     ],
     providers: [UporabnikService, SeznamiService],
     bootstrap: [AppComponent]

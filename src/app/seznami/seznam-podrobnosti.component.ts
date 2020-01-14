@@ -34,4 +34,8 @@ export class SeznamPodrobnostiComponent implements OnInit {
     nazaj(): void {
         this.location.back();
     }
+
+    uredi() {
+        this.router.navigate(['seznami/uredi/' + this.seznam.id]);
+    }
 }

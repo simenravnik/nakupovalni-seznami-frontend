@@ -17,6 +17,8 @@
         </tr>
     </table>
 
+    <button (click)="uredi()">Uredi seznam</button>
+
     <ul *ngFor="let artikel of seznam.artikli">
         <li>
             <b>{{artikel.imeArtikla}}</b>

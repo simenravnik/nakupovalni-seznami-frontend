@@ -34,13 +34,24 @@ export class SeznamiService {
                         .pipe(catchError(this.handleError));
     }
 
-    create(seznamId: number, artikel: Artikel): Observable<Artikel> {
+    createArtikel(seznamId: number, artikel: Artikel): Observable<Artikel> {
         var artikelDto = {
             seznamId : seznamId,
             imeArtikla : artikel.imeArtikla
           };
         return this.http.post<Artikel>(this.productsUrl, JSON.stringify(artikelDto), {headers: this.headers})
                         .pipe(catchError(this.handleError));
+    }
+
+    updateSeznam(seznam: NakupovalniSeznam): Observable<NakupovalniSeznam> {
+        var seznamDto = {
+            uporabnikId : 1,
+            naziv : seznam.naziv,
+            opis : seznam.opis
+        };
+        const url = `${this.url}/${seznam.id}`;
+        return this.http.put<NakupovalniSeznam>(url, JSON.stringify(seznamDto), {headers: this.headers})
+            .pipe(catchError(this.handleError));
     }
 
     private handleError(error: any): Promise<any> {
