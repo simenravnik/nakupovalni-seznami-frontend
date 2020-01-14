@@ -54,6 +54,12 @@ export class SeznamiService {
             .pipe(catchError(this.handleError));
     }
 
+    deleteArtikel(id: number): Observable<number> {
+        const url = `${this.productsUrl}${id}`;
+        return this.http.delete<number>(url, {headers: this.headers})
+            .pipe(catchError(this.handleError));
+    }
+
     private handleError(error: any): Promise<any> {
         console.error('Prišlo je do napake', error);
         return Promise.reject(error.message || error);

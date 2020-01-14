@@ -6,6 +6,7 @@ import { switchMap } from 'rxjs/operators';
 
 import {NakupovalniSeznam} from './models/seznam';
 import {SeznamiService} from './services/seznami.service';
+import {Artikel} from './models/artikel';
 
 @Component({
     moduleId: module.id,
@@ -32,10 +33,25 @@ export class SeznamPodrobnostiComponent implements OnInit {
     }
 
     nazaj(): void {
-        this.location.back();
+        this.router.navigate(['seznami/']);
     }
 
     uredi() {
         this.router.navigate(['seznami/uredi/' + this.seznam.id]);
+    }
+
+    deleteArtikel(artikel: Artikel) {
+        this.seznamiService
+            .deleteArtikel(artikel.id)
+            .subscribe(artikelId => this.seznam.artikli = this.seznam.artikli.filter(s => s.id !== artikelId));
+        this.refresh();
+    }
+
+    refresh(): void {
+        window.location.reload();
+    }
+
+    naPodrobnosti(artikel: Artikel) {
+        this.router.navigate(['/artikli/', artikel.id]);
     }
 }

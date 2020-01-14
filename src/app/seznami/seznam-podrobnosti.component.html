@@ -19,9 +19,14 @@
 
     <button (click)="uredi()">Uredi seznam</button>
 
-    <ul *ngFor="let artikel of seznam.artikli">
-        <li>
-            <b>{{artikel.imeArtikla}}</b>
+    <br>
+    <br>
+    <ul class="artikli">
+        <li *ngFor="let artikel of seznam.artikli">
+            <span>{{artikel.imeArtikla}}</span>
+            <button class="delete"
+                    (click)="deleteArtikel(artikel); $event.stopPropagation()">x
+            </button>
         </li>
     </ul>
 

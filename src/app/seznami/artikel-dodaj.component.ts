@@ -38,7 +38,7 @@ export class ArtikelDodajComponent {
     }
 
     nazaj(): void {
-        this.router.navigate(['/seznami']);
+        this.router.navigate(['/seznami/' + this.seznamId]);
     }
 
 }

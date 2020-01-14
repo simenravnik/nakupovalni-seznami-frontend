@@ -20,7 +20,7 @@ const routes: Routes = [
     {path: 'seznami', component: SeznamiComponent},
     {path: 'seznami/:id', component: SeznamPodrobnostiComponent},
     {path: 'seznami/:id/dodaj', component: ArtikelDodajComponent},
-    {path: 'seznami/uredi/:id', component: SeznamUrediComponent}
+    {path: 'seznami/uredi/:id', component: SeznamUrediComponent},
 ];
 
 @NgModule({
