@@ -37,6 +37,13 @@ export class UporabnikService {
                         .pipe(catchError(this.handleError));
     }
 
+
+    update(uporabnik: Uporabnik, id: number): Observable<Uporabnik> {
+        const url = `${this.url}/${id}`;
+        return this.http.put<Uporabnik>(url, JSON.stringify(uporabnik), {headers: this.headers})
+            .pipe(catchError(this.handleError));
+    }
+
     private handleError(error: any): Promise<any> {
         console.error('Prišlo je do napake', error);
         return Promise.reject(error.message || error);

@@ -15,6 +15,7 @@ import {SeznamiComponent} from './seznami/seznami.component';
 import {SeznamPodrobnostiComponent} from './seznami/seznam-podrobnosti.component';
 import {ArtikelDodajComponent} from './seznami/artikel-dodaj.component';
 import {SeznamiService} from './seznami/services/seznami.service';
+import {UporabnikUrediComponent} from './uporabnik/uporabnik-uredi.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {SeznamiService} from './seznami/services/seznami.service';
         UporabnikiComponent,
         UporabnikPodrobnostiComponent,
         UporabnikiDodajComponent,
+        UporabnikUrediComponent,
         SeznamiComponent,
         SeznamPodrobnostiComponent,
         ArtikelDodajComponent
