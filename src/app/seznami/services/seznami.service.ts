@@ -60,6 +60,22 @@ export class SeznamiService {
             .pipe(catchError(this.handleError));
     }
 
+    getArtikel(id: number): Observable<Artikel> {
+        const url = `${this.productsUrl}${id}`;
+        return this.http.get<Artikel>(url, {headers: this.headers})
+            .pipe(catchError(this.handleError));
+    }
+
+    updateArtikel(artikel: Artikel):  Observable<Artikel> {
+        var seznamDto = {
+            seznamId : 1,
+            imeArtikla: artikel.imeArtikla
+        };
+        const url = `${this.productsUrl}${artikel.id}`;
+        return this.http.put<Artikel>(url, JSON.stringify(seznamDto), {headers: this.headers})
+            .pipe(catchError(this.handleError));
+    }
+
     private handleError(error: any): Promise<any> {
         console.error('Prišlo je do napake', error);
         return Promise.reject(error.message || error);

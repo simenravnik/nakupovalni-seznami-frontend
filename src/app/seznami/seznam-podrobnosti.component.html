@@ -21,8 +21,8 @@
 
     <br>
     <br>
-    <ul class="artikli">
-        <li *ngFor="let artikel of seznam.artikli">
+    <ul class="uporabniki">
+        <li *ngFor="let artikel of seznam.artikli" (click)="naPodrobnosti(artikel)">
             <span>{{artikel.imeArtikla}}</span>
             <button class="delete"
                     (click)="deleteArtikel(artikel); $event.stopPropagation()">x
