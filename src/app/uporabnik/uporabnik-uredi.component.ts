@@ -30,7 +30,7 @@ export class UporabnikUrediComponent {
     }
 
     nazaj(): void {
-        this.router.navigate(['/uporabniki/' + this.uporabnik]);
+        this.router.navigate(['/uporabniki/']);
     }
 
 }
