@@ -43,4 +43,7 @@ export class SeznamiComponent implements OnInit {
         window.location.reload();
     }
 
+    nazaj() {
+        this.router.navigate(['/uporabniki']);
+    }
 }
