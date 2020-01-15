@@ -6,6 +6,7 @@ import {Artikel} from '../models/artikel';
 import { Observable } from 'rxjs';
 
 import { catchError } from 'rxjs/operators';
+import {Uporabnik} from '../../uporabnik/models/uporabnik';
 
 @Injectable()
 export class SeznamiService {
@@ -73,6 +74,16 @@ export class SeznamiService {
         };
         const url = `${this.productsUrl}${artikel.id}`;
         return this.http.put<Artikel>(url, JSON.stringify(seznamDto), {headers: this.headers})
+            .pipe(catchError(this.handleError));
+    }
+
+    createSeznam(seznam: NakupovalniSeznam) {
+        var seznamDto = {
+            uporabnikId : 1,
+            naziv: seznam.naziv,
+            opis: seznam.opis
+        };
+        return this.http.post<NakupovalniSeznam>(this.url, JSON.stringify(seznam), {headers: this.headers})
             .pipe(catchError(this.handleError));
     }
 

@@ -46,4 +46,8 @@ export class SeznamiComponent implements OnInit {
     nazaj() {
         this.router.navigate(['/uporabniki']);
     }
+
+    dodajSeznam() {
+        this.router.navigate(['/seznami/dodajSeznam']);
+    }
 }
