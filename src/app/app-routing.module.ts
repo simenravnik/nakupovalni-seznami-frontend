@@ -11,6 +11,7 @@ import {ArtikelDodajComponent} from './seznami/artikel-dodaj.component';
 import {UporabnikUrediComponent} from './uporabnik/uporabnik-uredi.component';
 import {SeznamUrediComponent} from './seznami/seznam-uredi.component';
 import {ArtikelUrediComponent} from './seznami/artikel-uredi.component';
+import {SeznamDodajComponent} from './seznami/seznam-dodaj.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/uporabniki', pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'uporabniki/:id/uredi', component: UporabnikUrediComponent},
     {path: 'dodajuporabnika', component: UporabnikiDodajComponent},
     {path: 'seznami', component: SeznamiComponent},
+    {path: 'seznami/dodajSeznam', component: SeznamDodajComponent},
     {path: 'seznami/:id', component: SeznamPodrobnostiComponent},
     {path: 'seznami/:id/dodaj', component: ArtikelDodajComponent},
     {path: 'seznami/uredi/:id', component: SeznamUrediComponent},

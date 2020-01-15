@@ -83,7 +83,8 @@ export class SeznamiService {
             naziv: seznam.naziv,
             opis: seznam.opis
         };
-        return this.http.post<NakupovalniSeznam>(this.url, JSON.stringify(seznam), {headers: this.headers})
+        console.log(JSON.stringify(seznamDto));
+        return this.http.post<NakupovalniSeznam>(this.url, JSON.stringify(seznamDto), {headers: this.headers})
             .pipe(catchError(this.handleError));
     }
 
